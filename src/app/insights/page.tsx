@@ -40,7 +40,7 @@ export default function InsightsPage() {
       <section className="section-padding">
         <div className="container">
           {articles.map((article) => (
-            <Link key={article.slug} href={`/insights/${article.slug}`}>
+            <Link key={article.slug} href={`/insights/${article.slug}`} style={{ textDecoration: 'none' }}>
               <div
                 style={{
                   padding: 'var(--space-12)',
@@ -48,22 +48,12 @@ export default function InsightsPage() {
                   border: '1px solid var(--color-border)',
                   borderRadius: 'var(--card-radius)',
                   cursor: 'pointer',
-                  transition: 'all var(--duration-normal) var(--ease-out)',
+                  transition: 'all 0.3s ease-out',
                   background: article.featured ? 'var(--color-blue-light)' : 'var(--color-white)',
-                }}
-                onMouseEnter={(e) => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.boxShadow = 'var(--shadow-md)';
-                  el.style.transform = 'translateY(-4px)';
-                }}
-                onMouseLeave={(e) => {
-                  const el = e.currentTarget as HTMLElement;
-                  el.style.boxShadow = 'none';
-                  el.style.transform = 'translateY(0)';
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: 'var(--space-4)' }}>
-                  <p style={{ color: 'var(--color-primary)', fontWeight: 'var(--font-weight-semibold)', fontSize: 'var(--font-size-sm)' }}>
+                  <p style={{ color: 'var(--color-primary)', fontWeight: '600', fontSize: 'var(--font-size-sm)' }}>
                     {article.category}
                   </p>
                   <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-secondary)' }}>
