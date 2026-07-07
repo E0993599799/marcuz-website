@@ -1,81 +1,38 @@
-import Link from 'next/link';
-import { getContent } from '@/lib/content';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-
-const content = { hero: {}, trustedRelationships: {}, businessReality: {}, beliefs: {} };
-
-export const metadata = {
-  title: 'MARCUZ - Digital Transformation Partner',
-  description: 'Transform your business with intelligent systems.',
-};
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import ProblemSection from '../components/ProblemSection';
+import SolutionSection from '../components/SolutionSection';
+import ServicesSection from '../components/ServicesSection';
+import CaseStudySection from '../components/CaseStudySection';
+import ProcessSection from '../components/ProcessSection';
+import TechStackSection from '../components/TechStackSection';
+import PricingSection from '../components/PricingSection';
+import FAQSection from '../components/FAQSection';
+import FinalCTA from '../components/FinalCTA';
+import Footer from '../components/Footer';
 
 export default function Home() {
-  const { hero, trustedRelationships, businessReality, beliefs } = content;
-
   return (
-    <div>
-      <Header />
-      <main>
-        {/* Hero Section */}
-        <section className="hero">
-          <h1>{hero.headline}</h1>
-          <p>{hero.subheading}</p>
-          <div className="cta-buttons">
-            <Link href="/discovery" className="btn btn-primary">
-              {hero.primaryCTA}
-            </Link>
-            <Link href="/work" className="btn btn-secondary">
-              {hero.secondaryCTA}
-            </Link>
-          </div>
-        </section>
+    <main className="min-h-screen flex flex-col relative overflow-hidden">
+      {/* Background glow effects */}
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent-cyan/10 blur-[120px]" />
+        <div className="absolute top-[40%] right-[-10%] w-[30%] h-[50%] rounded-full bg-accent-violet/10 blur-[150px]" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[30%] rounded-full bg-accent-lime/5 blur-[120px]" />
+      </div>
 
-        {/* Trusted Relationships */}
-        <section className="clients">
-          <h2>{trustedRelationships.headline}</h2>
-          <div className="client-grid">
-            {trustedRelationships.clients.map((client: any) => (
-              <div key={client.name} className="client-card">
-                <h3>{client.name}</h3>
-                <p>{client.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Business Reality */}
-        <section className="challenges">
-          <h2>{businessReality.headline}</h2>
-          <div className="challenge-grid">
-            {businessReality.challenges.map((challenge: any, idx: number) => (
-              <div key={idx} className="challenge-card">
-                <h3>{challenge.title}</h3>
-                <p>{challenge.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Beliefs Section */}
-        <section className="beliefs">
-          <h2>{beliefs.headline}</h2>
-          <ul className="beliefs-list">
-            {beliefs.beliefs.map((belief: any, idx: number) => (
-              <li key={idx}>{belief}</li>
-            ))}
-          </ul>
-        </section>
-
-        {/* CTA Section */}
-        <section className="cta-section">
-          <h2>Ready to transform?</h2>
-          <Link href="/discovery" className="btn btn-primary">
-            Book a Discovery Session
-          </Link>
-        </section>
-      </main>
+      <Navbar />
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <ServicesSection />
+      <CaseStudySection />
+      <ProcessSection />
+      <TechStackSection />
+      <PricingSection />
+      <FAQSection />
+      <FinalCTA />
       <Footer />
-    </div>
+    </main>
   );
 }

@@ -1,40 +1,24 @@
-import type { Metadata } from 'next';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import '@/styles/globals.css';
-import { content } from '@/lib/content';
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: content.site.title,
-  description: content.site.description,
-  openGraph: {
-    title: content.site.title,
-    description: content.site.description,
-    url: content.site.url,
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: content.site.title,
-    description: content.site.description,
-  },
-};
+  title: 'Marcuxz Web | Premium Web Systems & AI Automation',
+  description: 'From idea to launch-ready digital system. Marcuxz Web builds conversion-focused websites, AI-powered tools, and business automation systems.',
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={content.site.url} />
-      </head>
-      <body>
-        <a href="#main" style={{ position: 'absolute', left: '-9999px' }}>
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-[#05070D] text-white selection:bg-accent-violet selection:text-white`}>
+        {children}
       </body>
     </html>
-  );
+  )
 }

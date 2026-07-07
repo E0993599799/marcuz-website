@@ -1,103 +1,51 @@
-import Link from 'next/link';
-import { content } from '@/lib/content';
+import React from 'react';
 
-export function Footer() {
-  const { footer } = content;
-
+const Footer = () => {
   return (
-    <footer
-      style={{
-        background: 'var(--color-black-soft)',
-        color: 'var(--color-white)',
-        paddingTop: 'var(--spacing-3xl)',
-        paddingBottom: 'var(--spacing-2xl)',
-      }}
-    >
-      <div className="container">
-        {/* Main Footer Content */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 'var(--space-16)',
-            marginBottom: 'var(--space-16)',
-          }}
-        >
-          {/* Brand */}
-          <div>
-            <h3 style={{ marginBottom: 'var(--space-4)' }}>Marcuz</h3>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', lineHeight: 'var(--line-height-relaxed)' }}>
-              {footer.tagline}
+    <footer className="border-t border-white/10 bg-[#05070D] pt-16 pb-8">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-violet flex items-center justify-center font-bold text-white">M</div>
+              <span className="font-bold text-xl tracking-tight text-white">Marcuxz Web</span>
+            </div>
+            <p className="text-gray-400 text-sm max-w-md leading-relaxed">
+              Premium digital studio building high-converting websites, AI-powered web apps, automation workflows, and deployment-ready business systems.
             </p>
           </div>
-
-          {/* Quick Links */}
+          
           <div>
-            <h4 style={{ marginBottom: 'var(--space-4)' }}>Company</h4>
-            <nav style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-              {footer.quickLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: 'var(--font-size-sm)' }}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            <h4 className="text-white font-semibold mb-6">Services</h4>
+            <ul className="space-y-4 text-sm text-gray-400">
+              <li><a href="#" className="hover:text-accent-cyan transition-colors">Web Development</a></li>
+              <li><a href="#" className="hover:text-accent-cyan transition-colors">AI Integrations</a></li>
+              <li><a href="#" className="hover:text-accent-cyan transition-colors">Business Automation</a></li>
+              <li><a href="#" className="hover:text-accent-cyan transition-colors">Cloud Deployment</a></li>
+            </ul>
           </div>
-
-          {/* Legal */}
+          
           <div>
-            <h4 style={{ marginBottom: 'var(--space-4)' }}>Legal</h4>
-            <nav style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-              {footer.legal.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: 'var(--font-size-sm)' }}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            <h4 className="text-white font-semibold mb-6">Company</h4>
+            <ul className="space-y-4 text-sm text-gray-400">
+              <li><a href="#work" className="hover:text-accent-violet transition-colors">Our Work</a></li>
+              <li><a href="#pricing" className="hover:text-accent-violet transition-colors">Pricing</a></li>
+              <li><a href="#faq" className="hover:text-accent-violet transition-colors">FAQ</a></li>
+              <li><a href="#contact" className="hover:text-accent-violet transition-colors">Contact</a></li>
+            </ul>
           </div>
         </div>
-
-        {/* Divider */}
-        <div
-          style={{
-            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-            paddingTop: 'var(--space-8)',
-          }}
-        >
-          {/* Contact Info */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              marginBottom: 'var(--space-8)',
-            }}
-          >
-            <div style={{ display: 'flex', gap: 'var(--space-16)', fontSize: 'var(--font-size-sm)' }}>
-              <a href={`mailto:${footer.contact.email}`} style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                {footer.contact.email}
-              </a>
-              <a href={`tel:${footer.contact.phone}`} style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                {footer.contact.phone}
-              </a>
-            </div>
+        
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs text-gray-600">
+          <p>© {new Date().getFullYear()} Marcuxz Web. All rights reserved.</p>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <a href="#" className="hover:text-gray-300">Privacy Policy</a>
+            <a href="#" className="hover:text-gray-300">Terms of Service</a>
           </div>
-
-          {/* Copyright */}
-          <p style={{ fontSize: 'var(--font-size-sm)', color: 'rgba(255, 255, 255, 0.5)' }}>
-            {footer.copyright}
-          </p>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
