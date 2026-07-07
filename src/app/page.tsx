@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import { getContent } from '@/lib/content';
+import { content } from '@/lib/content';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-const content = { hero: {}, trustedRelationships: {}, businessReality: {}, beliefs: {} };
 
 export const metadata = {
   title: 'MARCUZ - Digital Transformation Partner',
