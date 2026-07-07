@@ -21,10 +21,10 @@ export default function Home() {
           <p>{hero.subheading}</p>
           <div className="cta-buttons">
             <Link href="/discovery" className="btn btn-primary">
-              {hero.primaryCTA}
+              {hero.primaryCta}
             </Link>
             <Link href="/work" className="btn btn-secondary">
-              {hero.secondaryCTA}
+              {hero.secondaryCta}
             </Link>
           </div>
         </section>
@@ -46,10 +46,10 @@ export default function Home() {
         <section className="challenges">
           <h2>{businessReality.headline}</h2>
           <div className="challenge-grid">
-            {businessReality.challenges.map((challenge: any, idx: number) => (
+            {businessReality.problems?.map((problem: any, idx: number) => (
               <div key={idx} className="challenge-card">
-                <h3>{challenge.title}</h3>
-                <p>{challenge.description}</p>
+                <h3>{problem.headline}</h3>
+                <p>{problem.description}</p>
               </div>
             ))}
           </div>
@@ -58,11 +58,14 @@ export default function Home() {
         {/* Beliefs Section */}
         <section className="beliefs">
           <h2>{beliefs.headline}</h2>
-          <ul className="beliefs-list">
-            {beliefs.beliefs.map((belief: any, idx: number) => (
-              <li key={idx}>{belief}</li>
+          <div className="beliefs-list">
+            {beliefs.beliefs?.map((belief: any, idx: number) => (
+              <div key={idx} className="belief-card">
+                <h3>{belief.headline}</h3>
+                <p>{belief.description}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         {/* CTA Section */}
