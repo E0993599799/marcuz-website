@@ -34,7 +34,7 @@ export default function TermsPage() {
           <p>These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which Marcuz operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
 
           <h2 style={{ marginTop: 'var(--space-12)' }}>9. Contact Us</h2>
-          <p>If you have any questions about these terms of service, please contact us at hello@marcuz.co.</p>
+          <p>If you have any questions about these terms of service, please contact us at e.meephu@gmail.com.</p>
         </div>
       </section>
     </div>

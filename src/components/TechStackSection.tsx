@@ -12,7 +12,7 @@ const TechStackSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 text-center">
-        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10">Powered by modern infrastructure</h3>
+        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10">ขับเคลื่อนด้วยโครงสร้างพื้นฐานที่ทันสมัย</h3>
         
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           {stack.map((tech, index) => (

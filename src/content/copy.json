@@ -122,9 +122,10 @@
       { "label": "Terms of Service", "href": "/terms" }
     ],
     "contact": {
-      "email": "hello@marcuz.co",
-      "phone": "+1 (555) 000-0000"
-    },
-    "copyright": "© 2026 Marcuz. All rights reserved."
+      "email": "e.meephu@gmail.com",
+      "line": "https://line.me/ti/p/MWRVrZwhH7",
+      "lineQr": "/contact/lineid.jpg"
+    }
+
   }
 }

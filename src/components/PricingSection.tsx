@@ -6,24 +6,24 @@ import { motion } from 'framer-motion';
 const PricingSection = () => {
   const plans = [
     {
-      name: 'Starter Landing Page',
-      price: 'Start from',
-      target: 'Best for: New products, pre-launch campaigns, small business validation.',
-      features: ['Premium 1-Page Design', 'Next.js + Tailwind CSS', 'Responsive Mobile-first', 'Contact Form Integration', 'Vercel Deployment'],
+      name: 'หน้าแลนดิ้งเพจเริ่มต้น',
+      price: 'เริ่มต้นที่',
+      target: 'เหมาะสำหรับ: สินค้าใหม่ แคมเปญก่อนเปิดตัว ธุรกิจขนาดเล็ก',
+      features: ['ดีไซน์พรีเมียม 1 หน้า', 'Next.js + Tailwind CSS', 'รองรับการใช้งานบนมือถือเป็นหลัก', 'เชื่อมต่อแบบฟอร์มติดต่อ', 'ติดตั้งระบบบน Vercel'],
       highlight: false
     },
     {
-      name: 'Growth Web System',
-      price: 'Start from',
-      target: 'Best for: Expanding businesses needing multiple pages and dynamic content.',
-      features: ['Multi-page Architecture', 'CMS / Blog Integration', 'Supabase Database Setup', 'SEO Optimization', 'Basic Analytics Setup'],
+      name: 'ระบบเว็บสำหรับธุรกิจเติบโตโต',
+      price: 'เริ่มต้นที่',
+      target: 'เหมาะสำหรับ: ธุรกิจที่กำลังขยายตัวและต้องการหน้าเว็บหลายหน้าพร้อมเนื้อหาแบบไดนามิก',
+      features: ['สถาปัตยกรรมแบบหลายหน้า', 'เชื่อมต่อระบบจัดการเนื้อหา / บล็อก', 'ติดตั้งฐานข้อมูล Supabase', 'ปรับแต่ง SEO', 'ติดตั้งระบบวิเคราะห์ข้อมูลพื้นฐาน'],
       highlight: true
     },
     {
-      name: 'Custom AI Automation',
-      price: 'Start from',
-      target: 'Best for: Teams needing internal tools, AI chatbots, and workflow automation.',
-      features: ['Custom AI Assistant Integration', 'LINE/Telegram Bots', 'n8n Workflow Automation', 'Custom Dashboard UI', 'API Integrations'],
+      name: 'ระบบอัตโนมัติ AI ปรับแต่งได้',
+      price: 'เริ่มต้นที่',
+      target: 'เหมาะสำหรับ: ทีมที่ต้องการเครื่องมือภายใน แชทบอท AI และระบบอัตโนมัติ',
+      features: ['เชื่อมต่อผู้ช่วย AI แบบปรับแต่งได้', 'บอท LINE/Telegram', 'ระบบอัตโนมัติ n8n', 'แดชบอร์ดแบบปรับแต่งได้', 'การเชื่อมต่อ API'],
       highlight: false
     }
   ];
@@ -40,7 +40,7 @@ const PricingSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            Transparent scoping. <span className="text-gray-500">No surprises.</span>
+            ขอบเขตงานชัดเจน โปร่งใส <span className="text-gray-500">ไม่มีค่าใช้จ่ายแอบแฝง</span>
           </motion.h2>
         </div>
 
@@ -56,7 +56,7 @@ const PricingSection = () => {
             >
               {plan.highlight && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent-cyan text-[#05070D] text-xs font-bold uppercase tracking-wider rounded-full">
-                  Most Popular
+                  ยอดนิยม
                 </div>
               )}
               
@@ -74,7 +74,7 @@ const PricingSection = () => {
               </ul>
               
               <a href="#contact" className={`block w-full py-4 text-center rounded-xl font-semibold transition-colors ${plan.highlight ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'}`}>
-                Discuss Scope
+                พูดคุยขอบเขตงาน
               </a>
             </motion.div>
           ))}

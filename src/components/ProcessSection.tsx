@@ -5,11 +5,11 @@ import { motion } from 'framer-motion';
 
 const ProcessSection = () => {
   const steps = [
-    { title: 'Decode Intent', desc: 'We align on your business goals and technical requirements.', icon: <Search className="w-6 h-6" /> },
-    { title: 'Design System', desc: 'Create a premium UI/UX that builds trust and drives conversion.', icon: <PenTool className="w-6 h-6" /> },
-    { title: 'Build Core', desc: 'Develop with Next.js for blazing fast performance.', icon: <Code2 className="w-6 h-6" /> },
-    { title: 'Automate Workflow', desc: 'Integrate AI and webhooks to eliminate manual tasks.', icon: <Bot className="w-6 h-6" /> },
-    { title: 'Deploy & Optimize', desc: 'Launch on robust cloud infrastructure with analytics.', icon: <Rocket className="w-6 h-6" /> },
+    { title: 'ถอดรหัสความต้องการ', desc: 'ทำความเข้าใจเป้าหมายธุรกิจและความต้องการทางเทคนิคของคุณ', icon: <Search className="w-6 h-6" /> },
+    { title: 'ออกแบบระบบ', desc: 'สร้าง UI/UX ระดับพรีเมียมที่สร้างความน่าเชื่อถือและเพิ่มยอดขาย', icon: <PenTool className="w-6 h-6" /> },
+    { title: 'พัฒนาระบบหลัก', desc: 'พัฒนาระบบด้วย Next.js เพื่อประสิทธิภาพที่รวดเร็ว', icon: <Code2 className="w-6 h-6" /> },
+    { title: 'สร้างระบบอัตโนมัติ', desc: 'ผสานการทำงานกับ AI และ webhooks เพื่อลดการทำงานที่ต้องใช้คน', icon: <Bot className="w-6 h-6" /> },
+    { title: 'ติดตั้งและปรับให้เหมาะสม', desc: 'เปิดตัวบนโครงสร้างพื้นฐานคลาวด์ที่แข็งแกร่งพร้อมระบบวิเคราะห์ข้อมูล', icon: <Rocket className="w-6 h-6" /> },
   ];
 
   return (
@@ -22,7 +22,7 @@ const ProcessSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            How we build systems
+            ขั้นตอนการทำงานของเรา
           </motion.h2>
         </div>
 

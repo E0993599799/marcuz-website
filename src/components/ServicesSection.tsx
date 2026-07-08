@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const ServicesSection = () => {
   const services = [
-    'Website & Landing Page Design',
-    'Next.js Web App Development',
-    'AI Assistant Integration',
-    'LINE / Telegram Automation',
-    'Dashboard & Internal Tools',
-    'Vercel Deployment Support'
+    'ออกแบบเว็บไซต์และหน้าแลนดิ้งเพจ',
+    'พัฒนาเว็บแอปพลิเคชันด้วย Next.js',
+    'การผสานระบบผู้ช่วย AI',
+    'ระบบอัตโนมัติผ่าน LINE / Telegram',
+    'แดชบอร์ดและเครื่องมือสำหรับใช้งานภายใน',
+    'บริการติดตั้งระบบบน Vercel'
   ];
 
   return (
@@ -21,9 +21,9 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Capabilities designed for modern digital needs.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">ความสามารถที่ออกแบบมาเพื่อตอบโจทย์ดิจิทัลยุคใหม่</h2>
             <p className="text-gray-400 mb-8 text-lg">
-              We specialize in the modern web stack. By focusing on Next.js, AI APIs, and cloud deployments, we deliver high-performance results much faster than traditional agencies.
+              เราเชี่ยวชาญในเทคโนโลยีเว็บยุคใหม่ ด้วยการมุ่งเน้นไปที่ Next.js, AI APIs และระบบคลาวด์ เราจึงสามารถส่งมอบผลลัพธ์ประสิทธิภาพสูงได้เร็วกว่าเอเจนซี่ทั่วไปมาก
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {services.map((service, index) => (

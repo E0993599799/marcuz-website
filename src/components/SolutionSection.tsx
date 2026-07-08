@@ -6,26 +6,26 @@ import { motion } from 'framer-motion';
 const SolutionSection = () => {
   const solutions = [
     {
-      title: 'Premium Landing Pages',
-      desc: 'High-converting, beautiful pages designed to turn visitors into customers.',
+      title: 'หน้าแลนดิ้งเพจระดับพรีเมียม',
+      desc: 'หน้าเว็บที่สวยงาม ออกแบบมาเพื่อเปลี่ยนผู้เข้าชมให้กลายเป็นลูกค้า',
       icon: <Layout className="w-8 h-8 text-accent-cyan" />,
       color: 'bg-accent-cyan/10 border-accent-cyan/20'
     },
     {
-      title: 'AI Web Apps',
-      desc: 'Intelligent web applications powered by OpenAI and Gemini for smart user experiences.',
+      title: 'เว็บแอปพลิเคชัน AI',
+      desc: 'เว็บแอปพลิเคชันอัจฉริยะที่ขับเคลื่อนด้วย OpenAI และ Gemini เพื่อประสบการณ์ผู้ใช้ที่ชาญฉลาด',
       icon: <Cpu className="w-8 h-8 text-accent-violet" />,
       color: 'bg-accent-violet/10 border-accent-violet/20'
     },
     {
-      title: 'Business Automation',
-      desc: 'Connect your apps, streamline data flow, and let bots do the repetitive work.',
+      title: 'ระบบอัตโนมัติสำหรับธุรกิจ',
+      desc: 'เชื่อมต่อแอปพลิเคชันของคุณ จัดการกระแสข้อมูล และปล่อยให้บอททำงานที่ซ้ำซากแทนคุณ',
       icon: <Workflow className="w-8 h-8 text-accent-lime" />,
       color: 'bg-accent-lime/10 border-accent-lime/20'
     },
     {
-      title: 'Deployment & Debugging',
-      desc: 'Enterprise-grade Vercel deployments, CI/CD pipelines, and zero-downtime architecture.',
+      title: 'การติดตั้งและแก้ไขระบบ',
+      desc: 'การติดตั้งระบบบน Vercel ระดับองค์กร, CI/CD pipelines และสถาปัตยกรรมที่ไม่มีการหยุดชะงัก',
       icon: <Terminal className="w-8 h-8 text-white" />,
       color: 'bg-white/5 border-white/10'
     }
@@ -43,7 +43,7 @@ const SolutionSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            Marcuxz turns your idea into a <span className="text-gradient">working digital system.</span>
+            Marcuz turns your idea into a <span className="text-gradient">working digital system.</span>
           </motion.h2>
         </div>
 

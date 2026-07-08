@@ -17,28 +17,28 @@ const HeroSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-6">
               <Sparkles className="w-4 h-4 text-accent-cyan" />
-              <span className="text-xs font-medium tracking-wide text-gray-300">PREMIUM DIGITAL STUDIO</span>
+              <span className="text-xs font-medium tracking-wide text-gray-300">ดิจิทัลสตูดิโอระดับพรีเมียม</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
-              Launch premium websites, AI systems, and automation workflows <span className="text-gradient">— faster.</span>
+              สร้างเว็บไซต์ระดับพรีเมียม ระบบ AI และระบบอัตโนมัติ <span className="text-gradient">— ได้เร็วยิ่งขึ้น</span>
             </h1>
             
             <p className="text-lg text-gray-400 mb-8 max-w-xl leading-relaxed">
-              Marcuxz Web designs and builds conversion-focused websites, AI-powered tools, and business automation systems that are ready to deploy, scale, and impress.
+              Marcuz Web ออกแบบและสร้างเว็บไซต์ที่เน้นการเพิ่มยอดขาย เครื่องมือ AI และระบบอัตโนมัติสำหรับธุรกิจ ที่พร้อมใช้งาน ขยายสเกลได้ และสร้างความประทับใจ
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a href="#contact" className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors">
-                Start Project <ArrowRight className="w-5 h-5" />
+                เริ่มต้นโปรเจกต์ <ArrowRight className="w-5 h-5" />
               </a>
               <a href="#work" className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors font-medium">
-                View Work
+                ดูผลงาน
               </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-500">
-              <span>Trusted Stack:</span>
+              <span>เทคโนโลยีที่ใช้:</span>
               <span className="text-gray-300">Next.js</span>
               <span className="text-gray-300">Tailwind</span>
               <span className="text-gray-300">Supabase</span>
@@ -65,8 +65,8 @@ const HeroSection = () => {
                   <div className="w-3 h-3 bg-accent-lime rounded-full"></div>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-400">Status</div>
-                  <div className="font-semibold text-sm">Deployment Ready</div>
+                  <div className="text-xs text-gray-400">สถานะ</div>
+                  <div className="font-semibold text-sm">พร้อมใช้งานจริง</div>
                 </div>
               </div>
             </div>

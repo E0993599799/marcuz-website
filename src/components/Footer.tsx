@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-violet flex items-center justify-center font-bold text-white">M</div>
-              <span className="font-bold text-xl tracking-tight text-white">Marcuxz Web</span>
+              <span className="font-bold text-xl tracking-tight text-white">Marcuz Web</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md leading-relaxed">
               Premium digital studio building high-converting websites, AI-powered web apps, automation workflows, and deployment-ready business systems.
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs text-gray-600">
-          <p>© {new Date().getFullYear()} Marcuxz Web. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Marcuz Web. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-300">Privacy Policy</a>
             <a href="#" className="hover:text-gray-300">Terms of Service</a>

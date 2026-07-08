@@ -22,10 +22,10 @@ export default function PrivacyPage() {
           <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, or destruction.</p>
 
           <h2 style={{ marginTop: 'var(--space-12)' }}>5. Your Rights</h2>
-          <p>You have the right to access, correct, and delete your personal data. To exercise these rights, contact us at hello@marcuz.co.</p>
+          <p>You have the right to access, correct, and delete your personal data. To exercise these rights, contact us at e.meephu@gmail.com.</p>
 
           <h2 style={{ marginTop: 'var(--space-12)' }}>6. Contact Us</h2>
-          <p>If you have questions about this privacy policy, please contact us at hello@marcuz.co.</p>
+          <p>If you have questions about this privacy policy, please contact us at e.meephu@gmail.com.</p>
         </div>
       </section>
     </div>
