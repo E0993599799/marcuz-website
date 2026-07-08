@@ -2,30 +2,33 @@
 import React from 'react';
 import { Layout, Cpu, Workflow, Terminal } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const SolutionSection = () => {
+  const { t } = useLanguage();
+
   const solutions = [
     {
-      title: 'หน้าแลนดิ้งเพจระดับพรีเมียม',
-      desc: 'หน้าเว็บที่สวยงาม ออกแบบมาเพื่อเปลี่ยนผู้เข้าชมให้กลายเป็นลูกค้า',
+      title: t('หน้าแลนดิ้งเพจระดับพรีเมียม', 'Premium Landing Pages'),
+      desc: t('หน้าเว็บที่สวยงาม ออกแบบมาเพื่อเปลี่ยนผู้เข้าชมให้กลายเป็นลูกค้า', 'High-converting, beautiful pages designed to turn visitors into customers.'),
       icon: <Layout className="w-8 h-8 text-accent-cyan" />,
       color: 'bg-accent-cyan/10 border-accent-cyan/20'
     },
     {
-      title: 'เว็บแอปพลิเคชัน AI',
-      desc: 'เว็บแอปพลิเคชันอัจฉริยะที่ขับเคลื่อนด้วย OpenAI และ Gemini เพื่อประสบการณ์ผู้ใช้ที่ชาญฉลาด',
+      title: t('เว็บแอปพลิเคชัน AI', 'AI Web Apps'),
+      desc: t('เว็บแอปพลิเคชันอัจฉริยะที่ขับเคลื่อนด้วย OpenAI และ Gemini เพื่อประสบการณ์ผู้ใช้ที่ชาญฉลาด', 'Intelligent web applications powered by OpenAI and Gemini for smart user experiences.'),
       icon: <Cpu className="w-8 h-8 text-accent-violet" />,
       color: 'bg-accent-violet/10 border-accent-violet/20'
     },
     {
-      title: 'ระบบอัตโนมัติสำหรับธุรกิจ',
-      desc: 'เชื่อมต่อแอปพลิเคชันของคุณ จัดการกระแสข้อมูล และปล่อยให้บอททำงานที่ซ้ำซากแทนคุณ',
+      title: t('ระบบอัตโนมัติสำหรับธุรกิจ', 'Business Automation'),
+      desc: t('เชื่อมต่อแอปพลิเคชันของคุณ จัดการกระแสข้อมูล และปล่อยให้บอททำงานที่ซ้ำซากแทนคุณ', 'Connect your apps, streamline data flow, and let bots do the repetitive work.'),
       icon: <Workflow className="w-8 h-8 text-accent-lime" />,
       color: 'bg-accent-lime/10 border-accent-lime/20'
     },
     {
-      title: 'การติดตั้งและแก้ไขระบบ',
-      desc: 'การติดตั้งระบบบน Vercel ระดับองค์กร, CI/CD pipelines และสถาปัตยกรรมที่ไม่มีการหยุดชะงัก',
+      title: t('การติดตั้งและแก้ไขระบบ', 'Deployment & Debugging'),
+      desc: t('การติดตั้งระบบบน Vercel ระดับองค์กร, CI/CD pipelines และสถาปัตยกรรมที่ไม่มีการหยุดชะงัก', 'Enterprise-grade Vercel deployments, CI/CD pipelines, and zero-downtime architecture.'),
       icon: <Terminal className="w-8 h-8 text-white" />,
       color: 'bg-white/5 border-white/10'
     }
@@ -43,7 +46,7 @@ const SolutionSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            Marcuz turns your idea into a <span className="text-gradient">working digital system.</span>
+            {t('Marcuxz เปลี่ยนไอเดียของคุณให้เป็น', 'Marcuxz turns your idea into a')} <span className="text-gradient">{t('ระบบดิจิทัลที่ใช้งานได้จริง', 'working digital system.')}</span>
           </motion.h2>
         </div>
 

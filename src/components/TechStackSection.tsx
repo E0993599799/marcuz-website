@@ -1,8 +1,11 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const TechStackSection = () => {
+  const { t } = useLanguage();
+
   const stack = [
     'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 
     'Supabase', 'PostgreSQL', 'Vercel', 'OpenAI', 'Gemini API', 
@@ -12,7 +15,9 @@ const TechStackSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 text-center">
-        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10">ขับเคลื่อนด้วยโครงสร้างพื้นฐานที่ทันสมัย</h3>
+        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10">
+          {t('ขับเคลื่อนด้วยโครงสร้างพื้นฐานที่ทันสมัย', 'Powered by modern infrastructure')}
+        </h3>
         
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           {stack.map((tech, index) => (

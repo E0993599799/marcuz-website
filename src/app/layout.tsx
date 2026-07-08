@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_Thai } from 'next/font/google'
 import './globals.css'
+import { Providers } from './providers'
 
 const notoSansThai = Noto_Sans_Thai({ subsets: ['thai', 'latin'] })
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="th" className="scroll-smooth">
       <body className={`${notoSansThai.className} bg-[#05070D] text-white selection:bg-accent-violet selection:text-white`}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )

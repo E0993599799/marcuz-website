@@ -2,15 +2,18 @@
 import React from 'react';
 import { XCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const ProblemSection = () => {
+  const { t } = useLanguage();
+
   const problems = [
-    { title: 'สื่อสารไม่ชัดเจน', desc: "ผู้เข้าชมออกจากเว็บเพราะไม่เข้าใจทันทีว่าคุณทำอะไร" },
-    { title: 'เปิดตัวช้า', desc: 'การพัฒนาใช้เวลาเป็นเดือนแทนที่จะเป็นสัปดาห์ ทำให้เสียโอกาสทางธุรกิจ' },
-    { title: 'ประสบการณ์ใช้งานบนมือถือแย่', desc: 'เว็บพังเมื่อดูบนมือถือ ทำให้เสียลูกค้าไปกว่า 60%' },
-    { title: 'ไม่มีระบบอัตโนมัติ', desc: 'ทีมของคุณเสียเวลาไปกับงานที่ทำด้วยมือซึ่ง AI สามารถจัดการได้' },
-    { title: 'ไม่มีกลยุทธ์เพิ่มยอดขาย', desc: "ดูสวย แต่ไม่สามารถสร้างยอดขายหรือหาลูกค้าใหม่ได้จริง" },
-    { title: 'โค้ดไร้ระเบียบ', desc: 'โค้ดที่ยุ่งเหยิง พังง่ายเมื่อใช้งานจริง และยากต่อการขยายสเกล' },
+    { title: t('สื่อสารไม่ชัดเจน', 'Unclear message'), desc: t("ผู้เข้าชมออกจากเว็บเพราะไม่เข้าใจทันทีว่าคุณทำอะไร", "Visitors leave because they don't understand what you do instantly.") },
+    { title: t('เปิดตัวช้า', 'Slow launch'), desc: t('การพัฒนาใช้เวลาเป็นเดือนแทนที่จะเป็นสัปดาห์ ทำให้เสียโอกาสทางธุรกิจ', 'Development takes months instead of weeks, delaying your time-to-market.') },
+    { title: t('ประสบการณ์ใช้งานบนมือถือแย่', 'Poor mobile UX'), desc: t('เว็บพังเมื่อดูบนมือถือ ทำให้เสียลูกค้าไปกว่า 60%', 'Your site breaks on phones, losing over 60% of potential customers.') },
+    { title: t('ไม่มีระบบอัตโนมัติ', 'No automation'), desc: t('ทีมของคุณเสียเวลาไปกับงานที่ทำด้วยมือซึ่ง AI สามารถจัดการได้', 'Your team wastes hours on manual tasks that could be handled by AI.') },
+    { title: t('ไม่มีกลยุทธ์เพิ่มยอดขาย', 'No conversion strategy'), desc: t("ดูสวย แต่ไม่สามารถสร้างยอดขายหรือหาลูกค้าใหม่ได้จริง", "Looks nice, but doesn't actually generate leads or sales.") },
+    { title: t('โค้ดไร้ระเบียบ', 'No deployment discipline'), desc: t('โค้ดที่ยุ่งเหยิง พังง่ายเมื่อใช้งานจริง และยากต่อการขยายสเกล', 'Spaghetti code that breaks in production and is hard to scale.') },
   ];
 
   return (
@@ -23,7 +26,7 @@ const ProblemSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            เว็บไซต์ส่วนใหญ่ดูสวยงาม <br/><span className="text-gray-500">แต่มีน้อยเว็บที่ใช้งานได้จริง</span>
+            {t('เว็บไซต์ส่วนใหญ่ดูสวยงาม', 'Most websites look nice.')} <br/><span className="text-gray-500">{t('แต่มีน้อยเว็บที่ใช้งานได้จริง', 'Few actually work.')}</span>
           </motion.h2>
         </div>
 

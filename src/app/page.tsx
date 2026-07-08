@@ -1,16 +1,17 @@
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import ProblemSection from '../components/ProblemSection';
-import SolutionSection from '../components/SolutionSection';
-import ServicesSection from '../components/ServicesSection';
-import CaseStudySection from '../components/CaseStudySection';
-import ProcessSection from '../components/ProcessSection';
-import TechStackSection from '../components/TechStackSection';
-import PricingSection from '../components/PricingSection';
-import FAQSection from '../components/FAQSection';
-import FinalCTA from '../components/FinalCTA';
-import Footer from '../components/Footer';
-import ContactWidget from '../components/ContactWidget';
+"use client";
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import ProblemSection from '@/components/ProblemSection';
+import SolutionSection from '@/components/SolutionSection';
+import ServicesSection from '@/components/ServicesSection';
+import CaseStudySection from '@/components/CaseStudySection';
+import ProcessSection from '@/components/ProcessSection';
+import TechStackSection from '@/components/TechStackSection';
+import PricingSection from '@/components/PricingSection';
+import FAQSection from '@/components/FAQSection';
+import FinalCTA from '@/components/FinalCTA';
+import Footer from '@/components/Footer';
+import ContactWidget from '@/components/ContactWidget';
 
 export default function Home() {
   return (
