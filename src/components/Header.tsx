@@ -10,10 +10,9 @@ export function Header() {
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        background: 'var(--color-white)',
-        borderBottom: '1px solid var(--color-border)',
-        backdropFilter: 'blur(10px)',
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        background: 'rgba(10, 14, 22, 0.78)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+        backdropFilter: 'blur(16px)',
       }}
     >
       <div className="container">
@@ -26,20 +25,18 @@ export function Header() {
             minHeight: '64px',
           }}
         >
-          {/* Logo */}
           <Link href="/">
             <span
               style={{
                 fontSize: 'var(--font-size-h3)',
                 fontWeight: 'var(--font-weight-bold)',
-                color: 'var(--color-text-primary)',
+                color: '#f5f7fb',
               }}
             >
               Marcuz
             </span>
           </Link>
 
-          {/* Nav Links */}
           <div
             style={{
               display: 'flex',
@@ -47,16 +44,16 @@ export function Header() {
               alignItems: 'center',
             }}
           >
-            <Link href="/" style={{ color: 'var(--color-text-primary)' }}>
+            <Link href="/" style={{ color: 'rgba(245, 247, 251, 0.84)' }}>
               {content.nav.home}
             </Link>
-            <Link href="/work" style={{ color: 'var(--color-text-primary)' }}>
+            <Link href="/work" style={{ color: 'rgba(245, 247, 251, 0.84)' }}>
               {content.nav.work}
             </Link>
-            <Link href="/insights" style={{ color: 'var(--color-text-primary)' }}>
+            <Link href="/insights" style={{ color: 'rgba(245, 247, 251, 0.84)' }}>
               {content.nav.insights}
             </Link>
-            <Link href="/about" style={{ color: 'var(--color-text-primary)' }}>
+            <Link href="/about" style={{ color: 'rgba(245, 247, 251, 0.84)' }}>
               {content.nav.about}
             </Link>
             <button className="btn-primary">

@@ -151,7 +151,7 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
-  background-color: var(--color-background);
+  background-color: #0f1117;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -274,6 +274,74 @@ input:focus, textarea:focus, select:focus {
   .section-padding {
     padding: var(--spacing-2xl) var(--space-4);
   }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: var(--space-4) var(--space-8);
+  height: 44px;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--button-radius);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  transform: scale(1.02);
+}
+
+.dark-canvas {
+  background: radial-gradient(circle at top, rgba(52, 102, 255, 0.12), transparent 30%), linear-gradient(180deg, #111722 0%, #0f1117 100%);
+  color: #f5f7fb;
+}
+
+.dark-section {
+  background: linear-gradient(180deg, rgba(17, 22, 34, 0.96) 0%, rgba(13, 17, 23, 0.98) 100%);
+  color: #f5f7fb;
+}
+
+.dark-section-alt {
+  background: linear-gradient(180deg, rgba(21, 27, 40, 0.94) 0%, rgba(16, 20, 30, 0.98) 100%);
+  color: #f5f7fb;
+}
+
+.dark-panel {
+  background: rgba(15, 19, 28, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--card-radius);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.dark-card {
+  background: rgba(20, 25, 36, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--card-radius);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+}
+
+.dark-copy {
+  color: rgba(245, 247, 251, 0.72);
+}
+
+.dark-muted {
+  color: rgba(245, 247, 251, 0.58);
+}
+
+.dark-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-eyebrow {
+  color: #8ab4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .grid {
