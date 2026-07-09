@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'About | Marcuz',
+  description: 'Learn about Marcuz, our mission, and how we approach digital transformation work.',
+};
+
 export default function AboutPage() {
   return (
     <div>

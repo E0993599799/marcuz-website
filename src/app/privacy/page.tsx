@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Privacy Policy | Marcuz',
+  description: 'Privacy policy for Marcuz and how we handle personal data submitted through the website.',
+};
+
 export default function PrivacyPage() {
   return (
     <div>
