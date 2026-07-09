@@ -9,7 +9,7 @@
     "work": "Our Work",
     "insights": "Insights",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Start Here"
   },
   "hero": {
     "headline": "Technology should make work effortless.",
@@ -98,17 +98,17 @@
     ]
   },
   "discovery": {
-    "headline": "Ready to rethink how your business works?",
-    "subheading": "Let's explore what's possible with a tailored discovery session.",
-    "formTitle": "Book Your Discovery Session",
+    "headline": "Start with a project review.",
+    "subheading": "We map the friction, identify the highest-impact fixes, and decide whether there is a fit before any build work begins.",
+    "formTitle": "Request a Project Review",
     "formFields": [
       { "name": "fullName", "label": "Full Name", "type": "text", "required": true },
       { "name": "email", "label": "Email Address", "type": "email", "required": true },
       { "name": "company", "label": "Company Name", "type": "text", "required": true },
       { "name": "industry", "label": "Industry", "type": "select", "required": true },
-      { "name": "challenge", "label": "What's your biggest challenge?", "type": "textarea", "required": true }
+      { "name": "challenge", "label": "What's the biggest friction right now?", "type": "textarea", "required": true }
     ],
-    "submitButton": "Schedule Discovery"
+    "submitButton": "Request Review"
   },
   "footer": {
     "tagline": "Helping organizations redesign how work gets done.",
