@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-violet flex items-center justify-center font-bold text-white">M</div>
-          <span className="font-bold text-xl tracking-tight text-white">Marcuxz Web</span>
+          <span className="font-bold text-xl tracking-tight text-white">MarcusX web</span>
         </div>
         
         <nav className="hidden md:flex gap-8 items-center">

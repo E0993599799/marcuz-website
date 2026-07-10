@@ -46,7 +46,7 @@ const SolutionSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
-            {t('Marcuxz เปลี่ยนไอเดียของคุณให้เป็น', 'Marcuxz turns your idea into a')} <span className="text-gradient">{t('ระบบดิจิทัลที่ใช้งานได้จริง', 'working digital system.')}</span>
+            {t('MarcusX เปลี่ยนไอเดียของคุณให้เป็น', 'MarcusX turns your idea into a')} <span className="text-gradient">{t('ระบบดิจิทัลที่ใช้งานได้จริง', 'working digital system.')}</span>
           </motion.h2>
         </div>
 

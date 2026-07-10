@@ -30,7 +30,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg text-gray-400 mb-8 max-w-xl leading-relaxed">
-              {t('Marcuxz Web ออกแบบและสร้างเว็บไซต์ที่เน้นการเพิ่มยอดขาย เครื่องมือ AI และระบบอัตโนมัติสำหรับธุรกิจ ที่พร้อมใช้งาน ขยายสเกลได้ และสร้างความประทับใจ', 'Marcuxz Web designs and builds conversion-focused websites, AI-powered tools, and business automation systems that are ready to deploy, scale, and impress.')}
+              {t('MarcusX web ออกแบบและสร้างเว็บไซต์ที่เน้นการเพิ่มยอดขาย เครื่องมือ AI และระบบอัตโนมัติสำหรับธุรกิจ ที่พร้อมใช้งาน ขยายสเกลได้ และสร้างความประทับใจ', 'MarcusX web designs and builds conversion-focused websites, AI-powered tools, and business automation systems that are ready to deploy, scale, and impress.')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
