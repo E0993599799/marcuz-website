@@ -8,24 +8,31 @@ const ContactWidget = () => {
   const [isClosed, setIsClosed] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
       if (isClosed) return;
 
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight;
+          const clientHeight = document.documentElement.clientHeight;
 
-      // Show popup when scrolled almost to the end of the page (within 350px from bottom)
-      const threshold = 350; // pixels from the bottom
-      const isAlmostEnd = scrollHeight - scrollTop - clientHeight < threshold;
+          // Show popup when scrolled almost to the end of the page (within 350px from bottom)
+          const threshold = 350; // pixels from the bottom
+          const isAlmostEnd = scrollHeight - scrollTop - clientHeight < threshold;
 
-      // Only show if the page is scrollable
-      const isScrollable = scrollHeight > clientHeight + 100;
+          // Only show if the page is scrollable
+          const isScrollable = scrollHeight > clientHeight + 100;
 
-      if (isScrollable && isAlmostEnd) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+          if (isScrollable && isAlmostEnd) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
