@@ -37,13 +37,14 @@ const SolutionSection = () => {
   return (
     <section id="services" className="py-24 relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-accent-violet/5 rounded-full blur-[150px] -z-10"></div>
-      
+
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ type: 'tween', ease: 'easeOut', duration: 0.5 }}
             className="text-3xl md:text-5xl font-bold mb-6"
           >
             {t('MarcusX เปลี่ยนไอเดียของคุณให้เป็น', 'MarcusX turns your idea into a')} <span className="text-gradient">{t('ระบบดิจิทัลที่ใช้งานได้จริง', 'working digital system.')}</span>
@@ -57,7 +58,8 @@ const SolutionSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ type: 'tween', ease: 'easeOut', duration: 0.4, delay: index * 0.05 }}
+              style={{ transform: 'translate3d(0, 0, 0)', backfaceVisibility: 'hidden' }}
               className={`p-8 rounded-3xl border ${solution.color} bg-[#080B12]/80 backdrop-blur-xl flex flex-col md:flex-row gap-6 items-start hover:-translate-y-1 transition-transform duration-300`}
             >
               <div className="p-4 rounded-2xl bg-[#05070D]">
