@@ -23,7 +23,7 @@ const CaseStudySection = () => {
 
         <div className="glass-card rounded-3xl overflow-hidden border border-white/10 bg-[#080B12]/80 backdrop-blur-xl">
           <div className="grid lg:grid-cols-2">
-            <div className="p-10 lg:p-12 flex flex-col justify-center">
+            <div className="p-6 sm:p-10 lg:p-12 flex flex-col justify-center">
               <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-accent-cyan w-max mb-6">
                 {t('กรณีศึกษา', 'CASE STUDY')}
               </div>
