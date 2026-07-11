@@ -1,17 +1,21 @@
 "use client";
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import ProblemSection from '@/components/ProblemSection';
-import SolutionSection from '@/components/SolutionSection';
-import ServicesSection from '@/components/ServicesSection';
-import CaseStudySection from '@/components/CaseStudySection';
-import ProcessSection from '@/components/ProcessSection';
-import TechStackSection from '@/components/TechStackSection';
-import PricingSection from '@/components/PricingSection';
-import FAQSection from '@/components/FAQSection';
-import FinalCTA from '@/components/FinalCTA';
-import Footer from '@/components/Footer';
-import ContactWidget from '@/components/ContactWidget';
+
+// Dynamically import below-the-fold components (Code Splitting / Lazy Loading)
+// ssr: true ensures the HTML is pre-rendered on the server for SEO, but JS is split and lazily loaded on the client.
+const ProblemSection = dynamic(() => import('@/components/ProblemSection'), { ssr: true });
+const SolutionSection = dynamic(() => import('@/components/SolutionSection'), { ssr: true });
+const ServicesSection = dynamic(() => import('@/components/ServicesSection'), { ssr: true });
+const CaseStudySection = dynamic(() => import('@/components/CaseStudySection'), { ssr: true });
+const ProcessSection = dynamic(() => import('@/components/ProcessSection'), { ssr: true });
+const TechStackSection = dynamic(() => import('@/components/TechStackSection'), { ssr: true });
+const PricingSection = dynamic(() => import('@/components/PricingSection'), { ssr: true });
+const FAQSection = dynamic(() => import('@/components/FAQSection'), { ssr: true });
+const FinalCTA = dynamic(() => import('@/components/FinalCTA'), { ssr: true });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: true });
+const ContactWidget = dynamic(() => import('@/components/ContactWidget'), { ssr: true });
 
 export default function Home() {
   return (
