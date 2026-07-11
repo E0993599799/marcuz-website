@@ -37,3 +37,36 @@ body {
   color: transparent;
   background-image: linear-gradient(to right, #06b6d4, #8b5cf6, #a3e635);
 }
+
+/* ============================================
+   AMBIENT GLOW FLOATING ANIMATIONS
+   ============================================ */
+@keyframes float-slow-1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(3%, 4%, 0) scale(1.08); }
+}
+
+@keyframes float-slow-2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-4%, -3%, 0) scale(1.05); }
+}
+
+@keyframes float-slow-3 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(2%, -3%, 0) scale(1.1); }
+}
+
+.animate-float-1 {
+  animation: float-slow-1 25s infinite ease-in-out;
+  will-change: transform;
+}
+
+.animate-float-2 {
+  animation: float-slow-2 30s infinite ease-in-out;
+  will-change: transform;
+}
+
+.animate-float-3 {
+  animation: float-slow-3 28s infinite ease-in-out;
+  will-change: transform;
+}

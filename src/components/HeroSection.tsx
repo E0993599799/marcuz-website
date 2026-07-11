@@ -1,12 +1,34 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const [index, setIndex] = useState(0);
+
+  const wordsTH = [
+    'เว็บไซต์ระดับพรีเมียม',
+    'ระบบ AI อัจฉริยะ',
+    'ระบบอัตโนมัติสำหรับธุรกิจ',
+    'หน้าแลนดิ้งเพจเน้นยอดขาย'
+  ];
+
+  const wordsEN = [
+    'premium websites',
+    'smart AI systems',
+    'business automation',
+    'high-converting pages'
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % wordsTH.length);
+    }, 3200);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -26,8 +48,25 @@ const HeroSection = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
-              {t('สร้างเว็บไซต์ระดับพรีเมียม ระบบ AI และระบบอัตโนมัติ', 'Launch premium websites, AI systems, and automation workflows')} <span className="text-gradient">{t('— ได้เร็วยิ่งขึ้น', '— faster.')}</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[220px] flex flex-col justify-start">
+              <span>{language === 'th' ? 'สร้าง' : 'Launch '}</span>
+              <span className="relative inline-block h-[1.25em] overflow-hidden my-1">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={index}
+                    initial={{ y: 24, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -24, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                    className="absolute left-0 text-gradient whitespace-nowrap block"
+                  >
+                    {language === 'th' ? wordsTH[index] : wordsEN[index]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              <span className="text-white">
+                {language === 'th' ? '— ได้เร็วยิ่งขึ้น' : '— faster.'}
+              </span>
             </h1>
             
             <p className="text-lg text-gray-400 mb-8 max-w-xl leading-relaxed">

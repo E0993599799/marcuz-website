@@ -18,9 +18,9 @@ export default function Home() {
     <main className="min-h-screen flex flex-col relative overflow-hidden">
       {/* Background glow effects */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent-cyan/10 blur-[120px]" />
-        <div className="absolute top-[40%] right-[-10%] w-[30%] h-[50%] rounded-full bg-accent-violet/10 blur-[150px]" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[30%] rounded-full bg-accent-lime/5 blur-[120px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent-cyan/10 blur-[120px] animate-float-1" />
+        <div className="absolute top-[40%] right-[-10%] w-[30%] h-[50%] rounded-full bg-accent-violet/10 blur-[150px] animate-float-2" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[30%] rounded-full bg-accent-lime/5 blur-[120px] animate-float-3" />
       </div>
 
       <Navbar />
