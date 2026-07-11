@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
@@ -61,7 +62,16 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-hero-glow rounded-full blur-[100px] opacity-30 animate-pulse"></div>
             
             <div className="relative w-full aspect-square lg:aspect-auto lg:h-full rounded-3xl overflow-hidden glass-card p-2 border-white/20">
-              <img src="/assets/marcuxz-hero.png" alt="Futuristic AI Workspace" className="w-full h-full object-cover rounded-2xl" />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                <Image 
+                  src="/assets/marcuxz-hero.png" 
+                  alt="Futuristic AI Workspace" 
+                  fill 
+                  priority 
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
               
               <div className="absolute -left-6 top-1/4 glass-card p-4 rounded-xl flex items-center gap-4 animate-[bounce_4s_infinite]">
                 <div className="w-10 h-10 rounded-full bg-accent-lime/20 flex items-center justify-center">

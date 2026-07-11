@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -46,7 +47,14 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             className="relative aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden glass-card border-white/10"
           >
-            <img src="/assets/marcuxz-tech-ecosystem.png" alt="Tech Ecosystem" className="w-full h-full object-cover" />
+            <Image 
+              src="/assets/marcuxz-tech-ecosystem.png" 
+              alt="Tech Ecosystem" 
+              fill 
+              loading="lazy"
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </motion.div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -51,8 +52,15 @@ const CaseStudySection = () => {
               </div>
             </div>
             
-            <div className="relative h-64 lg:h-auto border-l border-white/10">
-              <img src="/assets/marcuxz-before-after.png" alt="Before and After Redesign" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="relative h-64 lg:h-auto border-l border-white/10 overflow-hidden">
+              <Image 
+                src="/assets/marcuxz-before-after.png" 
+                alt="Before and After Redesign" 
+                fill 
+                loading="lazy"
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
