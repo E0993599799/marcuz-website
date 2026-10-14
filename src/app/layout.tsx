@@ -3,7 +3,13 @@ import { Noto_Sans_Thai } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
 
-const notoSansThai = Noto_Sans_Thai({ subsets: ['thai', 'latin'] })
+const notoSansThai = Noto_Sans_Thai({
+  subsets: ['thai', 'latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-noto-sans-thai',
+  adjustFontFallback: true,
+})
 
 export const metadata: Metadata = {
   title: 'Marcuz | ระบบเว็บไซต์ระดับพรีเมียมและระบบอัตโนมัติ AI',
@@ -17,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="th" className="scroll-smooth">
-      <body className={`${notoSansThai.className} bg-[#05070D] text-white selection:bg-accent-violet selection:text-white`}>
+      <body className={`${notoSansThai.variable} ${notoSansThai.className} bg-[#05070D] text-white selection:bg-accent-violet selection:text-white`}>
         <Providers>
           {children}
         </Providers>
