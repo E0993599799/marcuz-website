@@ -48,7 +48,7 @@ const HeroSection = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[220px] flex flex-col justify-start">
+            <h1 className={`${language === 'th' ? 'text-4xl sm:text-5xl md:text-5xl lg:text-6xl' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl'} font-bold leading-[1.1] mb-6 min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[220px] flex flex-col justify-start`}>
               <span>{language === 'th' ? 'สร้าง' : 'Launch '}</span>
               <span className="relative inline-block h-[1.25em] overflow-hidden my-1">
                 <AnimatePresence mode="wait">
@@ -58,7 +58,7 @@ const HeroSection = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -24, opacity: 0 }}
                     transition={{ duration: 0.4, ease: 'easeOut' }}
-                    className="absolute left-0 text-gradient whitespace-nowrap block"
+                    className={`${language === 'th' ? 'text-[0.78em] lg:text-[0.76em] tracking-[-0.02em]' : ''} absolute left-0 text-gradient whitespace-nowrap block max-w-full`}
                   >
                     {language === 'th' ? wordsTH[index] : wordsEN[index]}
                   </motion.span>
