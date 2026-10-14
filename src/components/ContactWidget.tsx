@@ -50,7 +50,7 @@ const ContactWidget = () => {
   return (
     <aside
       id="contact-widget"
-      className={`fixed bottom-4 right-4 z-50 w-[min(84vw,18rem)] rounded-2xl border border-white/10 bg-[#05070D]/95 backdrop-blur-xl shadow-[0_16px_40px_rgba(0,0,0,0.45)] overflow-hidden transition-all duration-500 ease-in-out ${
+      className={`fixed bottom-4 right-4 z-50 w-[min(84vw,18rem)] rounded-2xl border border-white/10 bg-[#05070D]/95 shadow-[0_16px_40px_rgba(0,0,0,0.45)] overflow-hidden transition-all duration-500 ease-in-out ${
         isVisible 
           ? "opacity-100 translate-y-0 pointer-events-auto" 
           : "opacity-0 translate-y-12 pointer-events-none"
