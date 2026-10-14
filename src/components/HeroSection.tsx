@@ -98,7 +98,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative lg:h-[600px] flex items-center justify-center"
           >
-            <div className="absolute inset-0 bg-hero-glow rounded-full blur-[100px] opacity-30 animate-pulse"></div>
+            <div className="absolute inset-0 bg-hero-glow rounded-full blur-[72px] opacity-20"></div>
             
             <div className="relative w-full aspect-square lg:aspect-auto lg:h-full rounded-3xl overflow-hidden glass-card p-2 border-white/20">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
@@ -112,7 +112,7 @@ const HeroSection = () => {
                 />
               </div>
               
-              <div className="absolute -left-6 top-1/4 glass-card p-4 rounded-xl flex items-center gap-4 animate-[bounce_4s_infinite]">
+              <div className="absolute -left-6 top-1/4 glass-card p-4 rounded-xl flex items-center gap-4 transition-transform duration-300 hover:-translate-y-1">
                 <div className="w-10 h-10 rounded-full bg-accent-lime/20 flex items-center justify-center">
                   <div className="w-3 h-3 bg-accent-lime rounded-full"></div>
                 </div>
