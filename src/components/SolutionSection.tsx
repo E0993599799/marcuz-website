@@ -59,8 +59,7 @@ const SolutionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ type: 'tween', ease: 'easeOut', duration: 0.4, delay: index * 0.05 }}
-              style={{ transform: 'translate3d(0, 0, 0)', backfaceVisibility: 'hidden' }}
-              className={`p-8 rounded-3xl border ${solution.color} bg-[#080B12]/80 backdrop-blur-xl flex flex-col md:flex-row gap-6 items-start hover:-translate-y-1 transition-transform duration-300`}
+              className={`p-8 rounded-3xl border ${solution.color} bg-[#080B12]/95 flex flex-col md:flex-row gap-6 items-start hover:-translate-y-1 transition-transform duration-300`}
             >
               <div className="p-4 rounded-2xl bg-[#05070D]">
                 {solution.icon}

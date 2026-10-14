@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#05070D]/80 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#05070D]/95 border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-violet flex items-center justify-center font-bold text-white">M</div>
